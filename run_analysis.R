@@ -72,7 +72,7 @@ merged.mean.std[indexf] <- lapply(merged.mean.std[indexf],
                                   function(x) as.numeric(as.character(x)))
 data.df <- tbl_df(merged.mean.std)
 
-#group by subject_id
+#group by subject_id & activity
 data.df <- group_by(data.df,subject_id,activity)
 
 #renaming variables in feature.txt for easier selection
